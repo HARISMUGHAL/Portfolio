@@ -1,0 +1,43 @@
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dbeafe;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  background-attachment: fixed; /* 🌀 Parallax scroll */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65); /* Dark overlay */
+  z-index: -1;
+}
+
+.home-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0284c7;
+}

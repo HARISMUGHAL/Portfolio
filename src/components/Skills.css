@@ -1,0 +1,26 @@
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: #0f172a;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  color: #7c3aed;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skill-item {
+  background-color: #1e293b;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #38bdf8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
