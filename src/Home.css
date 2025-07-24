@@ -1,5 +1,5 @@
 .home {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -12,6 +12,7 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .overlay {
@@ -28,13 +29,18 @@
   max-width: 700px;
   position: relative;
   z-index: 1;
-  padding-top: 4rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-content h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: #38bdf8;
+  word-break: break-word;
 }
 
 .home-content h2 {
@@ -63,8 +69,13 @@
   background: #0284c7;
 }
 
-/* ✅ Mobile Responsive Adjustments */
+/* ✅ Mobile Responsive */
 @media (max-width: 768px) {
+  .home {
+    background-attachment: scroll;
+    padding: 2rem 1rem;
+  }
+
   .home-content h1 {
     font-size: 2rem;
   }
