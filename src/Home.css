@@ -8,10 +8,14 @@
   padding: 20px;
   position: relative;
   z-index: 1;
-  background-attachment: fixed; /* 🌀 Parallax scroll */
-  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   box-sizing: border-box;
+  flex-direction: column;
 }
+
 
 /* Dark overlay for background */
 .overlay {
