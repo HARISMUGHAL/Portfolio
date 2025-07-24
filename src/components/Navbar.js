@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import Lottie from 'lottie-react';
-import aiLogo from '../assets/AiRobot.json'; // ✅ Make sure path is correct
+import aiLogo from '../assets/AiRobot.json';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
