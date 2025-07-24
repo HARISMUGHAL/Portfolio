@@ -1,5 +1,6 @@
 .home {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,9 +9,11 @@
   padding: 20px;
   position: relative;
   z-index: 1;
-  background: url('/assets/bg-hero.jpg') no-repeat center center / cover;
-  background-attachment: scroll; /* 📱 better for mobile */
-  flex-direction: column;
+  background-image: url('/assets/bg-hero.jpg'); /* ✅ public folder path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* 🚀 best for mobile */
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -21,14 +24,12 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); /* ✅ Lightened for visibility */
+  background: rgba(0, 0, 0, 0.55);
   z-index: -1;
 }
 
 .home-content {
   max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
   padding-top: 4rem;
 }
 
@@ -54,16 +55,20 @@
   color: #dbeafe;
 }
 
-.btn {
-  padding: 10px 20px;
-  background: #38bdf8;
-  color: #0f172a;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
+@media (max-width: 768px) {
+  .home-content {
+    padding-top: 2rem;
+  }
 
-.btn:hover {
-  background: #0284c7;
+  .home h1 {
+    font-size: 1.8rem;
+  }
+
+  .home h2 {
+    font-size: 1.2rem;
+  }
+
+  .home p {
+    font-size: 0.95rem;
+  }
 }

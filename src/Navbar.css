@@ -8,6 +8,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  flex-wrap: nowrap; /* 🚫 prevent vertical wrap */
 }
 
 .navbar-logo {
@@ -20,12 +21,14 @@
 .navbar-links {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: nowrap;
 }
 
 .navbar-links a {
   color: #dbeafe;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -33,20 +36,20 @@
   color: #38bdf8;
 }
 
-/* ✅ Mobile fix - stay horizontal but shrink */
 @media (max-width: 768px) {
   .navbar {
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 0.8rem 1rem;
   }
 
   .navbar-links {
     gap: 1rem;
-    flex-wrap: wrap;
-    font-size: 0.85rem;
   }
 
   .navbar-links a {
     font-size: 0.85rem;
+  }
+
+  .navbar-logo {
+    font-size: 1.2rem;
   }
 }
