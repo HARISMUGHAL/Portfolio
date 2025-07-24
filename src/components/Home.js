@@ -1,20 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Typewriter } from 'react-simple-typewriter';
 import '../Home.css';
 
 function Home() {
   return (
-    <section
-      id="home"
-      className="home"
-      style={{
-        background: `url('/assets/bg-hero.jpg') no-repeat center center/cover`,
-        position: 'relative',
-        zIndex: 1,
-        backgroundAttachment: 'fixed', // 🌀 Parallax scroll
-      }}
-    >
-      <div className="overlay" />
+    <section id="home" className="home">
+      <div className="overlay"></div>
 
       <motion.div
         className="home-content"
@@ -22,39 +14,31 @@ function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Muhammad Haris Kamran
-        </motion.h1>
+        <h1>Muhammad Haris Kamran</h1>
 
-        <motion.h2
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          AI Enthusiast & Developer
-        </motion.h2>
+        <h2>
+          <Typewriter
+            words={[
+              'AI Engineer',
+              'Deep Learning Developer',
+              'NLP Specialist',
+              'Computer Vision Researcher',
+              'React & Flutter Dev'
+            ]}
+            loop={true}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={40}
+            delaySpeed={1200}
+          />
+        </h2>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.4 }}
-        >
+        <p>
           Passionate about building intelligent systems using Machine Learning, NLP, Deep Learning and Computer Vision.
-        </motion.p>
+        </p>
 
-        <motion.a
-          href="#contact"
-          className="btn"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.6 }}
-        >
-          Let’s Connect
-        </motion.a>
+        <a href="#contact" className="btn">Let’s Connect</a>
       </motion.div>
     </section>
   );
