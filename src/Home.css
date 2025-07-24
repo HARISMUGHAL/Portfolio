@@ -1,5 +1,5 @@
 .home {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,25 +9,32 @@
   position: relative;
   z-index: 1;
   background-attachment: fixed; /* 🌀 Parallax scroll */
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
+/* Dark overlay for background */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.65); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.65);
   z-index: -1;
 }
 
+/* Text content layout */
 .home-content {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
   padding-top: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
+/* CTA button style */
 .btn {
   padding: 10px 20px;
   background: #38bdf8;
@@ -36,8 +43,29 @@
   font-weight: bold;
   border-radius: 8px;
   transition: background 0.3s ease;
+  margin-top: 1rem;
 }
 
 .btn:hover {
   background: #0284c7;
+}
+
+/* ✅ Responsive improvements */
+@media (max-width: 768px) {
+  .home-content {
+    padding-top: 2rem;
+  }
+
+  .home h1 {
+    font-size: 1.8rem;
+  }
+
+  .home h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
