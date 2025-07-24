@@ -12,11 +12,9 @@
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #38bdf8;
-  white-space: nowrap;
+  width: 50px;
 }
+
 
 .navbar-links {
   display: flex;
