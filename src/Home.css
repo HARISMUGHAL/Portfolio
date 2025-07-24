@@ -8,11 +8,8 @@
   padding: 20px;
   position: relative;
   z-index: 1;
-  background-image: url('/assets/bg-hero.jpg'); /* ✅ Use relative path correctly */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: url('/assets/bg-hero.jpg') no-repeat center center / cover;
+  background-attachment: scroll; /* 📱 better for mobile */
   flex-direction: column;
   box-sizing: border-box;
   overflow: hidden;
@@ -24,7 +21,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Slightly dark for text visibility */
+  background: rgba(0, 0, 0, 0.5); /* ✅ Lightened for visibility */
   z-index: -1;
 }
 
@@ -33,6 +30,28 @@
   margin: 0 auto;
   text-align: center;
   padding-top: 4rem;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.home h2 {
+  font-size: 1.5rem;
+  color: #38bdf8;
+  margin-bottom: 1.2rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.home p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  color: #dbeafe;
 }
 
 .btn {
@@ -47,23 +66,4 @@
 
 .btn:hover {
   background: #0284c7;
-}
-
-/* ✅ Extra tweak for mobile */
-@media (max-width: 768px) {
-  .home-content {
-    padding-top: 2rem;
-  }
-
-  .home h1 {
-    font-size: 1.6rem;
-  }
-
-  .home h2 {
-    font-size: 1.2rem;
-  }
-
-  .home p {
-    font-size: 0.95rem;
-  }
 }
